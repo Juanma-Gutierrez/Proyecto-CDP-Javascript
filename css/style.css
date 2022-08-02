@@ -1,0 +1,125 @@
+/* definición de variables de colores */
+:root {
+    --oscuro1: rgb(30, 54, 54);
+    --oscuro2: rgb(40, 71, 71);
+    --oscuro3: rgb(47, 81, 81);
+    --claro1: rgb(220, 220, 220);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--oscuro3);
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background-color: var(--oscuro1);
+    color: var(--claro1);
+    height: 10vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 1.1rem;
+    background-color: var(--oscuro2);
+    color: var(--claro1);
+    height: 10vh;
+}
+.menu li {
+    text-align: center;
+    width: 170px;
+    padding: 10px;
+    cursor: pointer;
+    height: 45px;
+}
+
+.menu li:hover {
+    background-color: var(--claro1);
+    color: var(--oscuro2);
+}
+
+.info {
+    background-color: var(--oscuro3);
+    color: var(--claro1);
+    height: 80vh;
+    width: 100vw;
+}
+h3 {
+    padding: 15px 0px 0px 0px;
+}
+.alta input {
+    padding: 5px;
+    margin: 10px;
+    background-color: var(--claro1);
+    color: var(--oscuro1);
+    border-radius: 3px;
+    border: 1px var(--oscuro1) solid;
+}
+
+fieldset {
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+.formulario input {
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--claro1);
+    color: var(--oscuro1);
+    border-radius: 3px;
+    border: 1px var(--oscuro1) solid;
+    width: 250px;
+}
+#ficha-alta {
+    display: none;
+}
+#alta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "datos-personales direccion otros";
+    justify-content: space-between;
+    align-items: start;
+    padding: 0px 30px;
+    gap: 30px;
+}
+
+#alta input {
+    margin: 5px 0px 12px 0px;
+    width: 100%;
+}
+#datos-personales {
+    grid-area: datos-personales;
+}
+#datos-personales .button {
+    color: var(--claro1);
+    background-color: var(--oscuro1);
+    border: 1px var(--claro1) solid;
+    border-radius: 5px;
+}
+#datos-personales .button:hover {
+    color: var(--oscuro1);
+    background-color: var(--claro1);
+}
+
+#direccion {
+    grid-area: direccion;
+}
+#otros {
+    grid-area: otros;
+}
