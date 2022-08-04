@@ -6,8 +6,7 @@
 function limpiaCampos(id, frase) {
     // seleccionamos todos los elementos option que hay en el nodo #id (#ccaa p.e.)
     var longitud = document.querySelectorAll("#" + id + " option").length;
-    // limpiamos los valores anteriores de población y provincia si >1 (> "Selecciona ...")
-    console.log(frase, longitud);
+    // limpiamos los valores anteriores de población y provincia si >= 1 (> "Selecciona ...")
     if (longitud >= 1) {
         var elemento = document.getElementById(id);
         // mientras elemento tenga algún hijo, lo eliminamos

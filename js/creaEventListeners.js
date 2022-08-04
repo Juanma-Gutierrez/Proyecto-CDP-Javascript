@@ -16,7 +16,7 @@ function creaEventListers() {
     document
         .getElementById("menu-baja")
         .addEventListener("click", muestraFichaBaja);
-    //  document.getElementById("guardar").addEventListener("click", grabarDatos);
+    document.getElementById("guardar").addEventListener("click", guardarDatos);
 
     document.getElementById("ccaa").addEventListener("change", cargaProvincia);
     document
