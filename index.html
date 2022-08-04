@@ -22,6 +22,7 @@
         <script src="./js/muestraFichaCons.js"></script>
         <script src="./js/muestraFichaBaja.js"></script>
         <script src="./js/leerDatos.js"></script>
+        <script src="./js/cargaPaises.js"></script>
 
         <!-- Librería de Iconos -->
         <script
@@ -115,12 +116,26 @@
                             placeholder="Dirección"
                         /><br />
                         <label for="pais">País: </label><br />
-                        <input
-                            type="text"
-                            id="pais"
-                            size="15"
-                            placeholder="País"
-                        /><br />
+                        <select name="pais" id="pais">
+                            <option selected class="pais">
+                                Selecciona país
+                            </option>
+                        </select>
+                        <br />
+                        <label for="provincia">Provincia: </label><br />
+                        <select name="provincia" id="provincia">
+                            <option selected class="provincia">
+                                Selecciona provincia
+                            </option>
+                        </select>
+                        <br />
+                        <label for="poblacion">Población: </label><br />
+                        <select name="poblacion" id="poblacion">
+                            <option selected class="poblacion">
+                                Selecciona población
+                            </option>
+                        </select>
+                        <br />
                         <label for="provincia">Provincia: </label><br />
                         <input
                             type="text"

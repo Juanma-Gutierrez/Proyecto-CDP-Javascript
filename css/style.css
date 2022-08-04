@@ -62,9 +62,8 @@ body {
 h3 {
     padding: 15px 0px 0px 0px;
 }
-.alta input {
-    padding: 5px;
-    margin: 10px;
+.alta input, .alta select{
+    margin:0px;
     background-color: var(--claro1);
     color: var(--oscuro1);
     border-radius: 3px;
@@ -76,7 +75,7 @@ fieldset {
     margin: 10px 0px;
 }
 
-.formulario input {
+.formulario input, .formulario select {
     padding: 5px;
     margin: 5px;
     background-color: var(--claro1);
@@ -122,4 +121,17 @@ fieldset {
 }
 #otros {
     grid-area: otros;
+}
+
+#ficha-alta{
+    display:none;
+}
+#ficha-modi{
+    display:none;
+}
+#ficha-cons{
+    display:none;
+}
+#ficha-baja{
+    display:none;
 }

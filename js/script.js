@@ -29,4 +29,6 @@ window.onload = function () {
     document.getElementById("menu-baja").addEventListener("click", muestraFichaBaja);
  /*   document.getElementById("guardar").addEventListener("click", grabarDatos); 
     leerDatos();*/
+    ocultaTodo();
+    cargaPaises();
 };
