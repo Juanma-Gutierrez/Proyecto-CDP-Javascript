@@ -16,25 +16,31 @@ function guardarDatos() {
     const fecha_nacimiento = document.getElementById("fecha-nacimiento").value;
     const departamento = document.getElementById("departamento").value;
 
-    requestDB = indexedDB.open(indexedDbName, indexedDbVersion);
-    requestDB.onsuccess = function (event) {
-        db = event.target.result;
-        usersObjectStore = db
-            .transaction(indexedDbStorage, "readwrite")
-            .objectStore(indexedDbStorage);
-        usersObjectStore.put({
-            nombre,
-            apellido1,
-            apellido2,
-            direccion,
-            ccaa,
-            provincia,
-            poblacion,
-            movil,
-            telefono,
-            fecha_nacimiento,
-            departamento,
-        });
-    };
-    borrarTodo();
+    if (nombre != "" && apellido1 != "" && apellido2 != "") {
+        requestDB = indexedDB.open(indexedDbName, indexedDbVersion);
+        requestDB.onsuccess = function (event) {
+            db = event.target.result;
+            usersObjectStore = db
+                .transaction(indexedDbStorage, "readwrite")
+                .objectStore(indexedDbStorage);
+            usersObjectStore.put({
+                nombre,
+                apellido1,
+                apellido2,
+                direccion,
+                ccaa,
+                provincia,
+                poblacion,
+                movil,
+                telefono,
+                fecha_nacimiento,
+                departamento,
+            });
+        };
+        alert("Usuario grabado correctamente.")
+        borrarTodo();
+    }
+    else{
+        alert ("No se puede guardar el usuario sin datos correctamente introducidos.")
+    }
 }
