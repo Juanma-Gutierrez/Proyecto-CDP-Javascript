@@ -1,3 +1,8 @@
+"use strict";
+
+/*
+ * Una vez cargada la CCAA, realiza un fetch para cargar las provincias correspondientes
+*/
 function cargaPoblacion() {
     // Si cambiamos la provincia
     limpiaCampos("poblacion", "Selecciona población"); // limpiamos poblacion
@@ -6,7 +11,6 @@ function cargaPoblacion() {
     )
         .then((response) => response.json())
         .then(function (data) {
-            console.log(data);
             var select = document.getElementsByName("poblacion")[0];
             var provincia = document.getElementById("provincia").value;
             for (let value in data) {
@@ -14,7 +18,6 @@ function cargaPoblacion() {
                 option.value = data[value].CMUN;
                 option.text = data[value].NOMBRE;
                 if (data[value].CPRO == parseInt(provincia)) {
-                    console.log(option);
                     select.appendChild(option);
                 }
             }

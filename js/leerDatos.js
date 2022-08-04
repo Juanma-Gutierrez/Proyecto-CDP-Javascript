@@ -1,3 +1,8 @@
+"use strict";
+
+/*
+ * Lee los datos de la base de datos para mostrarlos por pantalla
+ */
 function leerDatos() {
     const cuerpo = document.getElementById("cuerpo");
     cuerpo.innerHTML = "Los datos almacenados son: <br />";

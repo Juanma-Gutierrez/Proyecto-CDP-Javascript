@@ -1,3 +1,8 @@
+"use strict";
+
+/*
+ * Realiza un fetch para cargar todas las comunidades autónomas
+ */
 function cargaCCAA() {
     limpiaCampos("provincia", "Selecciona provincia"); // limpiamos provincia
     limpiaCampos("poblacion", "Selecciona población"); // limpiamos poblacion
@@ -8,7 +13,6 @@ function cargaCCAA() {
         .then((response) => response.json())
         .then(function (data) {
             var select = document.getElementById("ccaa");
-            console.log(data);
             for (let value in data) {
                 const option = document.createElement("option");
                 option.value = data[value].Código;

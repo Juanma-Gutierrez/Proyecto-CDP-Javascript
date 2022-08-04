@@ -15,9 +15,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/style.css" />
         <!-- Funciones Javascript -->
+        <script src="./js/aleatorio.js" type="text/javascript"></script>
         <script src="./js/cargaCCAA.js" type="text/javascript"></script>
+        <script src="./js/creaBBDD.js" type="text/javascript"></script>
+        <script
+            src="./js/cargaDatosAleatorios.js"
+            type="text/javascript"
+        ></script>
         <script src="./js/cargaPoblacion.js" type="text/javascript"></script>
         <script src="./js/cargaProvincia.js" type="text/javascript"></script>
+        <script
+            src="./js/creaEventListeners.js"
+            type="text/javascript"
+        ></script>
         <script src="./js/leerDatos.js" type="text/javascript"></script>
         <script src="./js/limpiaCampos.js" type="text/javascript"></script>
         <script src="./js/muestraFichaAlta.js" type="text/javascript"></script>
@@ -103,12 +113,18 @@
                     />
                     <input
                         type="button"
+                        id="borrar"
+                        class="button"
+                        value="Borrar todo"
+                    />
+                    <input
+                        type="button"
                         id="guardar"
                         class="button"
                         value="Guardar"
                     />
                 </div>
-                <div id="direccion">
+                <div id="domicilio">
                     <fieldset>
                         <legend>Dirección</legend>
                         <label for="direccion">Dirección: </label><br />
@@ -120,28 +136,24 @@
                         /><br />
                         <label for="ccaa">Comunidad autónoma: </label><br />
                         <select name="ccaa" id="ccaa">
-                            <option selected class="ccaa">
+                            <option selected>
                                 Selecciona comunidad autónoma
                             </option>
                         </select>
                         <br />
                         <label for="provincia">Provincia: </label><br />
                         <select name="provincia" id="provincia">
-                            <option selected class="provincia">
-                                Selecciona provincia
-                            </option>
+                            <option selected>Selecciona provincia</option>
                         </select>
                         <br />
                         <label for="poblacion">Población: </label><br />
                         <select name="poblacion" id="poblacion">
-                            <option selected class="poblacion">
-                                Selecciona población
-                            </option>
+                            <option selected>Selecciona población</option>
                         </select>
                         <br />
                     </fieldset>
                 </div>
-                <div id="telefono">
+                <div id="otrosDatos">
                     <fieldset>
                         <legend>Otros datos</legend>
                         <label for="movil">Teléfono móvil: </label><br />
