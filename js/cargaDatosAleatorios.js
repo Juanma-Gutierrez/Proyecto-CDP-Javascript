@@ -36,29 +36,6 @@ function cargaDatosAleatorios() {
         .catch((error) => console.error("Error, ha ocurrido: ", error));
 }
 
-function seleccionaCCAA(json) {
-    console.log("poblacion:", json.poblacion);
-    console.log("provincia:", json.provincia);
-    console.log("pais:", json.pais);
-    limpiaCampos("ccaa", json.pais); // limpiamos poblacion
-    limpiaCampos("provincia", json.provincia); // limpiamos poblacion
-    limpiaCampos("poblacion", json.poblacion); // limpiamos poblacion
-
-    /*     var select = document.getElementById("ccaa");
-    var items = select.getElementsByTagName("option");
-    var index = Math.floor(Math.random() * items.length);
-    console.log("Salida:", items[index]);
-    items[index].setAttribute("selected", true); 
-    console.log("Salida:", select);
-/*  select.value = "1";
-    select.text = "Andalucía"; 
-    select.option.selected = "selected";
-    select.option.item(index).value = items[index].value;
-    select.option.item(index).text = items[index].text;
-    select.option.item(index).selected = "selected"; */
-    // cargaProvincia();
-}
-
 /*
  * Modifica el formato de la fecha para pasar de formato dd/mm/aa a yyyy-mm-dd
  * @param {tipo(string "dd/mm/yy")}

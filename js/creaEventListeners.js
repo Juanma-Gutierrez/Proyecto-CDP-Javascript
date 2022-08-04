@@ -2,8 +2,8 @@
 
 /*
  * Crea eventListeners
-*/
-function creaEventListers(){
+ */
+function creaEventListers() {
     document
         .getElementById("menu-alta")
         .addEventListener("click", muestraFichaAlta);
@@ -22,6 +22,10 @@ function creaEventListers(){
     document
         .getElementById("provincia")
         .addEventListener("change", cargaPoblacion);
-
-    document.getElementById("importar").addEventListener("click", cargaDatosAleatorios);
+    document
+        .getElementById("importar")
+        .addEventListener("click", cargaDatosAleatorios);
+    document
+        .getElementById("borrar")
+        .addEventListener("click", borrarTodo);
 }
