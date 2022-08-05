@@ -157,7 +157,7 @@ td {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.borrar{
+.borrar, .editar{
     background-color: var(--oscuro3);
     color: var(--claro1);
     border: 0px;

@@ -19,7 +19,7 @@ function cargaDatosAleatorios() {
             document.getElementById("direccion").value =
                 json[usuario].direccion;
 
-            seleccionaCCAA(json[usuario]);
+            seleccionaCCAA(json[usuario], "pais");
             document.getElementById("ccaa").value = json[usuario].pais;
             document.getElementById("provincia").value =
                 json[usuario].provincia;

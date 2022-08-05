@@ -45,7 +45,15 @@ function guardarDatos() {
                 departamento,
             });
         };
-        alert("Usuario grabado correctamente.");
+        alert(
+            "Usuario " +
+                nombre +
+                " " +
+                apellido1 +
+                " " +
+                apellido2 +
+                " grabado correctamente."
+        );
         limpiarFicha();
     } else {
         alert(
