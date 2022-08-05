@@ -137,14 +137,23 @@ fieldset {
 #ficha-baja {
     display: none;
 }
-
+tr{
+    background-color: var(--oscuro3);
+    color: var(--claro1);
+    padding:2px;
+}
+tr:hover{
+    background-color: var(--claro1);
+    color: var(--oscuro3);
+    transition: 0.1s;
+}
 th {
     background-color: var(--claro1);
     color: var(--oscuro1);
     padding:2px;
 }
 td {
-    padding: 2px;
+    padding: 2px 5px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
