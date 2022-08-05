@@ -16,7 +16,6 @@ function leerDatos() {
             let usuarios = event.target.result;
             console.log(usuarios);
             usuarios.forEach((element) => {
-                console.log("Salida:", element);
                 // creamos la fila con las celdas correspondientes
                 var linea = document.createElement("tr"),
                     campoNombre = document.createElement("td"),

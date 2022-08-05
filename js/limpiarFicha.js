@@ -3,7 +3,7 @@
 /*
  * Borra todos los campos de la ficha de alta y reinicia los option de ccaa, provincia y población
  */
-function borrarTodo() {
+function limpiarFicha() {
     document.getElementById("nombre").value = "";
     document.getElementById("apellido1").value = "";
     document.getElementById("apellido2").value = "";

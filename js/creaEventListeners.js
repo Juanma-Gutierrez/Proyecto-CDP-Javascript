@@ -21,5 +21,5 @@ function creaEventListers() {
         .addEventListener("click", cargaDatosAleatorios);
     document
         .getElementById("borrar")
-        .addEventListener("click", borrarTodo);
+        .addEventListener("click", limpiarFicha);
 }
