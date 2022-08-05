@@ -33,9 +33,7 @@
         <script src="./js/leerDatos.js" type="text/javascript"></script>
         <script src="./js/limpiaCampos.js" type="text/javascript"></script>
         <script src="./js/muestraFichaAlta.js" type="text/javascript"></script>
-        <script src="./js/muestraFichaBaja.js" type="text/javascript"></script>
         <script src="./js/muestraFichaCons.js" type="text/javascript"></script>
-        <script src="./js/muestraFichaModi.js" type="text/javascript"></script>
         <script src="./js/ocultaTodo.js" type="text/javascript"></script>
         <script src="./js/script.js" type="text/javascript"></script>
         <script src="./js/seleccionaCCAA.js" type="text/javascript"></script>
@@ -68,14 +66,8 @@
                     <li id="menu-alta">
                         <i class="fa-solid fa-plus"></i> Alta
                     </li>
-                    <li id="menu-modi">
-                        <i class="fa-solid fa-pen-to-square"></i> Modificación
-                    </li>
                     <li id="menu-cons">
                         <i class="fa-solid fa-magnifying-glass"></i> Consulta
-                    </li>
-                    <li id="menu-baja">
-                        <i class="fa-solid fa-trash-can"></i> Baja
                     </li>
                 </ul>
             </nav>
@@ -195,17 +187,27 @@
                 </div>
             </div>
         </div>
-        <div class="container info" id="ficha-modi">
-            <h3 class="centered">Modificación de usuario</h3>
-            <div class="container formulario centered" id="modi"></div>
-        </div>
         <div class="container info" id="ficha-cons">
-            <h3 class="centered">Consulta de usuario</h3>
+            <h3 class="centered">Consulta de usuarios</h3>
             <div class="container formulario centered" id="cons"></div>
-        </div>
-        <div class="container info" id="ficha-baja">
-            <h3 class="centered">Baja de usuario</h3>
-            <div class="container formulario centered" id="baja"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido 1</th>
+                        <th>Apellido 2</th>
+                        <th>Dirección</th>
+                        <th>Población</th>
+                        <th>Provincia</th>
+                        <th>CCAA / País</th>
+                        <th>Móvil</th>
+                        <th>Teléfono</th>
+                        <th>Fecha nac.</th>
+                        <th>Departamento</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo"></tbody>
+            </table>
         </div>
     </body>
 </html>

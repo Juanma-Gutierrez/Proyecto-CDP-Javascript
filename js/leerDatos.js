@@ -4,9 +4,8 @@
  * Lee los datos de la base de datos para mostrarlos por pantalla
  */
 function leerDatos() {
+    limpiaDatos();
     const cuerpo = document.getElementById("cuerpo");
-    cuerpo.innerHTML = "Los datos almacenados son: <br />";
-
     requestDB = indexedDB.open(indexedDbName, indexedDbVersion);
     requestDB.onsuccess = function (event) {
         db = event.target.result;
@@ -17,6 +16,7 @@ function leerDatos() {
             let usuarios = event.target.result;
             console.log(usuarios);
             usuarios.forEach((element) => {
+                console.log("Salida:", element);
                 // creamos la fila con las celdas correspondientes
                 var linea = document.createElement("tr"),
                     campoNombre = document.createElement("td"),
@@ -25,7 +25,7 @@ function leerDatos() {
                     campoDireccion = document.createElement("td"),
                     campoPoblacion = document.createElement("td"),
                     campoProvincia = document.createElement("td"),
-                    campoPais = document.createElement("td"),
+                    campoCCAA = document.createElement("td"),
                     campoTelefono = document.createElement("td"),
                     campoMovil = document.createElement("td"),
                     campoFechaNacimiento = document.createElement("td"),
@@ -41,35 +41,38 @@ function leerDatos() {
                 campoDireccion.innerHTML = element.direccion;
                 campoPoblacion.innerHTML = element.poblacion;
                 campoProvincia.innerHTML = element.provincia;
-                campoPais.innerHTML = element.pais;
+                campoCCAA.innerHTML = element.ccaa;
                 campoTelefono.innerHTML = element.telefono;
                 campoMovil.innerHTML = element.movil;
-                campoFechaNacimiento.innerHTML = element.fechaNacimiento;
+                campoFechaNacimiento.innerHTML = element.fecha_nacimiento;
                 campoDepartamento.innerHTML = element.departamento;
-                campoNombre.innerHTML = element.nombre;
-                campoNombre.innerHTML = element.nombre;
-                campoClave.innerHTML = element.clave;
-                campoTlf.innerHTML = element.tlf;
 
-                botonBorrar.textContent = "Borrar"; // etiqueto el botón
                 botonBorrar.className = "borrar"; // asigno el botón a una clase
                 botonBorrar.addEventListener("click", function () {
                     // añado al botón un evento de escucha (listener)
                     borrarDatos(element.id); // la función 'forEach' tiene una variable 'posición', la cuál uso para saber el elemento que he de borrar
                 });
-
-                imagenBorrar.src = "./delete.svg"; // añado al botón una imagen
+                imagenBorrar.src = "./images/trash-solid.svg"; // añado al botón una imagen
                 imagenBorrar.width = "22"; // añado al botón los estilos
                 imagenBorrar.height = "22";
-                imagenBorrar.style = "vertical-align: middle";
+
+                imagenBorrar.style = "vertical-align: middle; padding:3px;";
 
                 botonBorrar.appendChild(imagenBorrar); // añado la imagen al botón
                 campoBorrar.appendChild(botonBorrar); // añado el botón a la celda
 
-                linea.appendChild(campoNombre); // añado a la línea la celda con el nombre
-                linea.appendChild(campoClave); // añado a la línea la celda con la clave
-                linea.appendChild(campoTlf); // añado a la línea la celda con el tlf
-                linea.appendChild(campoBorrar); // añado a la línea la celda con el botón
+                linea.appendChild(campoNombre);
+                linea.appendChild(campoApellido1);
+                linea.appendChild(campoApellido2);
+                linea.appendChild(campoDireccion);
+                linea.appendChild(campoPoblacion);
+                linea.appendChild(campoProvincia);
+                linea.appendChild(campoCCAA);
+                linea.appendChild(campoMovil);
+                linea.appendChild(campoTelefono);
+                linea.appendChild(campoFechaNacimiento);
+                linea.appendChild(campoDepartamento);
+                linea.appendChild(botonBorrar)
 
                 cuerpo.appendChild(linea); // añado al tbody 'cuerpo' la línea
             });

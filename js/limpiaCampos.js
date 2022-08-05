@@ -19,3 +19,17 @@ function limpiaCampos(id, frase) {
         elemento.appendChild(seleccionar);
     }
 }
+
+/*
+ * Limpia los campos de la página de consulta
+*/
+function limpiaDatos() {
+    var longitud = document.querySelectorAll("#cuerpo").length;
+    if (longitud > 0) {
+        var elemento = document.getElementById("cuerpo");
+        // mientras elemento tenga algún hijo, lo eliminamos
+        while (elemento.firstChild) {
+            elemento.removeChild(elemento.firstChild);
+        }
+    }
+}

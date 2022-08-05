@@ -3,7 +3,7 @@
     --oscuro1: rgb(30, 54, 54);
     --oscuro2: rgb(40, 71, 71);
     --oscuro3: rgb(47, 81, 81);
-    --claro1: rgb(220, 220, 220);
+    --claro1: #dcdcdc;
 }
 
 * {
@@ -60,10 +60,11 @@ body {
     width: 100vw;
 }
 h3 {
-    padding: 15px 0px 0px 0px;
+    padding: 15px;
 }
-.alta input, .alta select{
-    margin:0px;
+.alta input,
+.alta select {
+    margin: 0px;
     background-color: var(--claro1);
     color: var(--oscuro1);
     border-radius: 3px;
@@ -75,7 +76,8 @@ fieldset {
     margin: 10px 0px;
 }
 
-.formulario input, .formulario select {
+.formulario input,
+.formulario select {
     padding: 5px;
     margin: 5px;
     background-color: var(--claro1);
@@ -123,15 +125,31 @@ fieldset {
     grid-area: otros;
 }
 
-#ficha-alta{
-    display:none;
+#ficha-alta {
+    display: none;
 }
-#ficha-modi{
-    display:none;
+#ficha-modi {
+    display: none;
 }
-#ficha-cons{
-    display:none;
+#ficha-cons {
+    display: none;
 }
-#ficha-baja{
-    display:none;
+#ficha-baja {
+    display: none;
+}
+
+th {
+    background-color: var(--claro1);
+    color: var(--oscuro1);
+    padding:2px;
+}
+td {
+    padding: 2px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.borrar{
+    background-color: var(--oscuro3);
+    color: var(--claro1);
+    border: 0px;
 }
