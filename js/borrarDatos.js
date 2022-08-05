@@ -5,19 +5,19 @@
  * @param {tipo(string id)}
  */
 function borrarDatos(id) {
-    requestDB = indexedDB.open(indexedDbName, indexedDbVersion);
-    requestDB.onsuccess = function (event) {
-        db = event.target.result;
-        usersObjectStore = db
-            .transaction(indexedDbStorage, "readwrite")
-            .objectStore(indexedDbStorage);
-        var respuesta = alerta(id);
-        if ((respuesta == 1)) {
+    var respuesta = alerta(id);
+    if (respuesta == 1) {
+        requestDB = indexedDB.open(indexedDbName, indexedDbVersion);
+        requestDB.onsuccess = function (event) {
+            db = event.target.result;
+            usersObjectStore = db
+                .transaction(indexedDbStorage, "readwrite")
+                .objectStore(indexedDbStorage);
             usersObjectStore.delete(id);
-        } else {
-            alert("Se ha cancelado el borrado del registro");
-        }
-    };
+        };
+    } else {
+        alert("Se ha cancelado el borrado del registro");
+    }
     leerDatos();
 }
 
