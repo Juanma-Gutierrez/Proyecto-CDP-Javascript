@@ -1,8 +1,8 @@
 /* definición de variables de colores */
 :root {
-    --oscuro1: rgb(30, 54, 54);
-    --oscuro2: rgb(40, 71, 71);
-    --oscuro3: rgb(47, 81, 81);
+    --oscuro1: #1e3636;
+    --oscuro2: #284747;
+    --oscuro3: #2f5151;
     --claro1: #dcdcdc;
 }
 
@@ -10,7 +10,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 body {
@@ -32,7 +32,7 @@ body {
 
 .menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     list-style: none;
     font-size: 1.1rem;
@@ -53,6 +53,12 @@ body {
     color: var(--oscuro2);
 }
 
+#div_dark_mode{
+    display:flex;
+    justify-content: right;
+    width: 30%;
+}
+
 .info {
     background-color: var(--oscuro3);
     color: var(--claro1);
@@ -65,10 +71,10 @@ h3 {
 .alta input,
 .alta select {
     margin: 0px;
-    background-color: var(--claro1);
-    color: var(--oscuro1);
+    background-color: #dcdcdc;  /* Definimos colores fijos para los input */
+    color: #1e3636;
     border-radius: 3px;
-    border: 1px var(--oscuro1) solid;
+    border: 1px #1e3636 solid;
 }
 
 fieldset {
@@ -80,10 +86,10 @@ fieldset {
 .formulario select {
     padding: 5px;
     margin: 5px;
-    background-color: var(--claro1);
-    color: var(--oscuro1);
+    background-color: #dcdcdc;
+    color: #1e3636;
     border-radius: 3px;
-    border: 1px var(--oscuro1) solid;
+    border: 1px #1e3636 solid;
     width: 250px;
 }
 #ficha-alta {
@@ -162,3 +168,4 @@ td {
     color: var(--claro1);
     border: 0px;
 }
+
