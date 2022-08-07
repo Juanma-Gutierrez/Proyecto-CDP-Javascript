@@ -17,6 +17,23 @@ Ejercicio final de Javascript, que debe cubrir las siguientes especificaciones:
 
 Abrir el archivo index.html y automáticamente se pone en marcha la aplicación en tu navegador.
 
+## Funcionamiento 🔨
+
+Tenemos dos páginas principales:
+
+-   Alta:
+    -   Donde podremos dar de alta a los usuarios.
+    -   Los campos CCAA, Provincia y Población son dinámicos, en función a lo que se vaya escogiendo, se va adaptando el contenido de los siguientes campos.
+    -   Existe la opción de cargar datos aleatorios desde una API externa. En ese caso, CCAA pasa a comportarse como País, modificando el selector para que deje introducir dicho campo. Lo mismo ocurre con Provincia y Población, que se adaptan para poder registrar los campos importados.
+
+-   Consulta:
+    -   Podremos ver un listado con todos los registros.
+    -   Tendremos opción de modificar el registro seleccionado pulsando el lápiz 🖍.
+        -   En ese caso, nos traslada todos los datos del registro a la página de altas.
+    -   También podremos borrar el registro pulsando en la papelera 🗑.
+
+Aparte, tendremos opción de seleccionar modo oscuro o modo claro, pulsando en el botón indicado.
+
 ## Formatos:
 
 -   HTML
