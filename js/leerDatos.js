@@ -29,12 +29,8 @@ function leerDatos() {
                     campoMovil = document.createElement("td"),
                     campoFechaNacimiento = document.createElement("td"),
                     campoDepartamento = document.createElement("td"),
-                    campoEditar = document.createElement("td"),
-                    botonEditar = document.createElement("button"),
-                    imagenEditar = document.createElement("img"),
-                    campoBorrar = document.createElement("td"),
-                    botonBorrar = document.createElement("button"),
-                    imagenBorrar = document.createElement("img");
+                    botonBorrar = document.createElement("td"),
+                    botonEditar = document.createElement("td");
 
                 // rellenamos los datos con el contenido del array
                 campoNombre.innerHTML = element.nombre;
@@ -48,33 +44,16 @@ function leerDatos() {
                 campoMovil.innerHTML = element.movil;
                 campoFechaNacimiento.innerHTML = element.fecha_nacimiento;
                 campoDepartamento.innerHTML = element.departamento;
-
-                botonEditar.className = "editar"; // asigno el botón a una clase
+                botonEditar.innerHTML = '<i class="fa-solid fa-pen"></i>';
                 botonEditar.addEventListener("click", function () {
                     // añado al botón un evento de escucha (listener)
-                    editarDatos(element); // la función 'forEach' tiene una variable 'posición', la cuál uso para saber el elemento que he de editar
+                    editarDatos(element); // la función 'forEach' tiene una variable 'posición', la cuál uso para saber el elemento que he de borrar
                 });
-                botonBorrar.className = "borrar"; // asigno el botón a una clase
+                botonBorrar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
                 botonBorrar.addEventListener("click", function () {
                     // añado al botón un evento de escucha (listener)
-                    borrarDatos(element.id); // la función 'forEach' tiene una variable 'posición', la cuál uso para saber el elemento que he de borrar
+                    borraDatos(element.id); // la función 'forEach' tiene una variable 'posición', la cuál uso para saber el elemento que he de borrar
                 });
-                imagenEditar.src = "./images/pencil-solid.svg"; // añado al botón una imagen
-                imagenEditar.width = "22"; // añado al botón los estilos
-                imagenEditar.height = "22";
-
-                imagenEditar.style = "vertical-align: middle; padding:3px;";
-
-                botonEditar.appendChild(imagenEditar); // añado la imagen al botón
-                campoEditar.appendChild(botonEditar); // añado el botón a la celda
-                imagenBorrar.src = "./images/trash-solid.svg"; // añado al botón una imagen
-                imagenBorrar.width = "22"; // añado al botón los estilos
-                imagenBorrar.height = "22";
-
-                imagenBorrar.style = "vertical-align: middle; padding:3px;";
-
-                botonBorrar.appendChild(imagenBorrar); // añado la imagen al botón
-                campoBorrar.appendChild(botonBorrar); // añado el botón a la celda
 
                 linea.appendChild(campoNombre);
                 linea.appendChild(campoApellido1);
@@ -87,9 +66,8 @@ function leerDatos() {
                 linea.appendChild(campoTelefono);
                 linea.appendChild(campoFechaNacimiento);
                 linea.appendChild(campoDepartamento);
-                linea.appendChild(botonEditar)
-                linea.appendChild(botonBorrar)
-
+                linea.appendChild(botonEditar);
+                linea.appendChild(botonBorrar);
                 cuerpo.appendChild(linea); // añado al tbody 'cuerpo' la línea
             });
         };
