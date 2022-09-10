@@ -26,13 +26,21 @@ Tenemos dos páginas principales:
     -   Los campos CCAA, Provincia y Población son dinámicos, en función a lo que se vaya escogiendo, se va adaptando el contenido de los siguientes campos.
     -   Existe la opción de cargar datos aleatorios desde una API externa. En ese caso, CCAA pasa a comportarse como País, modificando el selector para que deje introducir dicho campo. Lo mismo ocurre con Provincia y Población, que se adaptan para poder registrar los campos importados.
 
+
+![Imagen de alta de usuarios](https://raw.githubusercontent.com/Juanma-Gutierrez/Proyecto-CDP-Javascript/main/assets/photo01.jpg)
+
 -   Consulta:
     -   Podremos ver un listado con todos los registros.
     -   Tendremos opción de modificar el registro seleccionado pulsando el lápiz 🖍.
         -   En ese caso, nos traslada todos los datos del registro a la página de altas.
     -   También podremos borrar el registro pulsando en la papelera 🗑.
 
+
+![Imagen de consulta de usuarios](https://raw.githubusercontent.com/Juanma-Gutierrez/Proyecto-CDP-Javascript/main/assets/photo02.jpg)
+
 Aparte, tendremos opción de seleccionar modo oscuro o modo claro, pulsando en el botón indicado.
+
+![Imagen de modo claro/modo oscuro](https://raw.githubusercontent.com/Juanma-Gutierrez/Proyecto-CDP-Javascript/main/assets/photo03.jpg)
 
 ## Formatos:
 
